@@ -6,7 +6,8 @@
 ```use addressBook;```
 
 ## UC2 - Create Table addressBook
-```create table addressBook
+``` 
+    create table addressBook
     ( firstName    varchar(30) NOT NULL,
       lastName     varchar(30) NOT NULL,
       Address      varchar(100) NOT NULL,
