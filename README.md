@@ -29,4 +29,6 @@
 
 ## UC4 - Edit Existing Contact using Name
 ```UPDATE addressBook SET Phone_No.=9810223540 WHERE firstName='Suyash';```
-    
+
+## UC5 - Delete Existing Contact using firstName
+```DELETE FROM addressBook WHERE firstName='Harshit';```
