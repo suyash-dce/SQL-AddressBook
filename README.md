@@ -64,3 +64,6 @@ UPDATE addressBook set type='Family' where firstName='Harshit';
 UPDATE addressBook set type='Friend' where firstName='Raman';
 UPDATE addressBook set type='Profession' where firstName='Sushant';
 ```
+
+## UC10 - Ability to get number of contact persons(count by type)
+```SELECT type,COUNT(type) as noOfContacts FROM addressBook GROUP BY type;```
