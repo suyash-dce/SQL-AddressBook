@@ -50,3 +50,6 @@ SELECT city,COUNT(city) FROM addressBook GROUP BY city;
 ```
 SELECT state,COUNT(state) FROM addressBook GROUP BY state;
 ```
+
+## UC8 - Ability to retrieve entries sorted alphabetically by Person’s name for a given city
+```SELECT * FROM addressBook WHERE city='New Delhi' ORDER BY firstName;```
