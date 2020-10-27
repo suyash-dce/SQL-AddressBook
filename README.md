@@ -32,3 +32,13 @@
 
 ## UC5 - Delete Existing Contact using firstName
 ```DELETE FROM addressBook WHERE firstName='Harshit';```
+
+## UC6 -Ability to Retrieve Person belonging to a City or State
+
+### Display based on State
+```SELECT * FROM addressBook WHERE State='Delhi';```
+
+### Display based on city
+```SELECT * FROM addressBook WHERE City='New Delhi';```
+
+
