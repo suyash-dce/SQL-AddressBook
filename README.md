@@ -67,3 +67,10 @@ UPDATE addressBook set type='Profession' where firstName='Sushant';
 
 ## UC10 - Ability to get number of contact persons(count by type)
 ```SELECT type,COUNT(type) as noOfContacts FROM addressBook GROUP BY type;```
+
+## UC11 - Ability to add person to both Friend and Family
+```
+INSERT INTO addressBook(firstName,lastName,Address,City,State,Zip,Phone_No.,Email,bookName,type) VALUES
+('Raman','Agarwal','Kavi Nagar','Ghaziabad','Uttar Pradesh',201156,9911667846,'raman.kumar@gmail.com','Book1','Friend'),
+('Akshit','Jain','Uttam Nagar','New Delhi','Delhi',110059,9716825746,'akshit.jain06@gmail.com','Book1','Family');
+```
