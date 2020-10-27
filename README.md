@@ -53,3 +53,14 @@ SELECT state,COUNT(state) FROM addressBook GROUP BY state;
 
 ## UC8 - Ability to retrieve entries sorted alphabetically by Person’s name for a given city
 ```SELECT * FROM addressBook WHERE city='New Delhi' ORDER BY firstName;```
+
+## UC9 - Ability to identify each Address Book with name and Type.
+```
+ALTER table addressBook add bookName varchar(30) AFTER Email;
+UPDATE addressBook set bookName='Book1' where firstName='Suyash' or firstName='Harshit';
+ALTER table addressBook add type varchar(30) AFTER bookName;
+UPDATE addressBook set type='Family' where firstName='Suyash';
+UPDATE addressBook set type='Family' where firstName='Harshit';
+UPDATE addressBook set type='Friend' where firstName='Raman';
+UPDATE addressBook set type='Profession' where firstName='Sushant';
+```
