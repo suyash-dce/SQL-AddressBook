@@ -41,4 +41,12 @@
 ### Display based on city
 ```SELECT * FROM addressBook WHERE City='New Delhi';```
 
-
+## UC7 - Ability to understand the size of address book by City and State
+### Count contacts By city
+```
+SELECT city,COUNT(city) FROM addressBook GROUP BY city;
+```
+### Count contacts By state
+```
+SELECT state,COUNT(state) FROM addressBook GROUP BY state;
+```
