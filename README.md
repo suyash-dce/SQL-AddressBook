@@ -74,3 +74,46 @@ INSERT INTO addressBook(firstName,lastName,Address,City,State,Zip,Phone_No.,Emai
 ('Raman','Agarwal','Kavi Nagar','Ghaziabad','Uttar Pradesh',201156,9911667846,'raman.kumar@gmail.com','Book1','Friend'),
 ('Akshit','Jain','Uttam Nagar','New Delhi','Delhi',110059,9716825746,'akshit.jain06@gmail.com','Book1','Family');
 ```
+
+## UC13 -SQL Query on New Tables
+### Creating table contactDetails
+```
+create table contactDetails
+(
+S.No INT UNSIGNED NOT NULL PRIMARY KEY,
+firstName varchar(30) NOT NULL,
+lastName varchar(30) NOT NULL,
+Phone_No. int(15) NOT NULL,
+Email varchar(50) NOT NULL, 
+);
+```
+
+### Creating table addressDetails
+```
+create table addressDetails
+FOREIGN KEY (S.No) REFERENCES contactDetails (S.No),
+Address varchar(100) NOT NULL,
+City varchar(30) NOT NULL,
+State varchar(30) NOT NULL,
+Zip int(6) NOT NULL,
+);
+```
+
+### Inserting values to contactDetails
+```
+INSERT INTO contactDetails (S.No, firstName, lastName, Phone_No., Email) VALUES
+(1,'Suyash','Jain',9810224035,'suyash.jain@gmail.com'),
+(2,'Harshit','Jain','8285683470','harshit.jain@gmail.com')
+(3,'Raman','Agarwal',9911667846,'raman.kumar@gmail.com'),
+(4,'Akshit','Jain',9716825746,'akshit.jain06@gmail.com);
+;        
+```
+
+### Inserting values to addressDetails
+```
+INSERT INTO addressDetails (S.No, Address,City, State, Zip) VALUES
+(1,'Najafgarh','New Delhi','Delhi'),
+(2,'Njf','New Delhi','Delhi',110043),
+(3,'Kavi Nagar','Ghaziabad','Uttar Pradesh',201156),
+(4,'Uttam Nagar','New Delhi','Delhi',110059),
+```
