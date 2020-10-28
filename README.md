@@ -117,3 +117,22 @@ INSERT INTO addressDetails (S.No, Address,City, State, Zip) VALUES
 (3,'Kavi Nagar','Ghaziabad','Uttar Pradesh',201156),
 (4,'Uttam Nagar','New Delhi','Delhi',110059),
 ```
+
+### Ability to Retrieve Person belonging to a City or State
+### Display based on State
+```SELECT * FROM contactDetails cd inner join addressDetails ad on cd.S.No=ad.S.No WHERE ad.State='Delhi';```
+### Display based on city
+```SELECT * FROM contactDetails cd inner join addressDetails ad on cd.S.No=ad.S.No WHERE ad.City='New Delhi';```
+
+### Ability to understand the size of address book by City and State
+### Count contacts By city
+```
+SELECT city,COUNT(city) FROM addressDetails GROUP BY city;
+```
+### Count contacts By state
+```
+SELECT state,COUNT(state) FROM addressDetails GROUP BY state;
+```
+
+### Ability to retrieve entries sorted alphabetically by Person’s name for a given city
+```SELECT * FROM contactDetails cd inner join addressDetails ad on cd.S.No=ad.S.No WHERE ad.city='New Delhi' ORDER BY cd.firstName;```
